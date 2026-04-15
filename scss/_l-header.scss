@@ -1,2 +1,42 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__logo {
+    flex: 0 1 82px;
+    margin: 0;
+
+    &-link {
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__phone {
+    flex: 0 0 auto;
+
+    &-link {
+      font-weight: 600;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #f7a85b;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+  }
 }
