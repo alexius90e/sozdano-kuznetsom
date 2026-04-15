@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "ST-Nizhegorodsky";
+  src: url("../fonts/ST-Nizhegorodsky.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -84,5 +92,237 @@ img {
 @media (max-width: 576px) {
   .header__phone-link {
     font-size: 18px;
+  }
+}
+
+.first-screen {
+  min-height: 1080px;
+  background: url(../assets/first-screen-bg.jpg) center no-repeat, -webkit-gradient(linear, left top, right top, from(#000), to(#0a1010));
+  background: url(../assets/first-screen-bg.jpg) center no-repeat, linear-gradient(90deg, #000 0%, #0a1010 100%);
+  background-size: auto 1080px;
+}
+@media (max-width: 992px) {
+  .first-screen {
+    background: url(../assets/first-screen-bg.jpg) left -360px center no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .first-screen {
+    background: url(../assets/first-screen-bg.jpg) left -420px center no-repeat;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen {
+    min-height: 782px;
+    background: url(../assets/first-screen-bg.jpg) left -170px bottom no-repeat;
+    background-size: auto 520px;
+  }
+}
+.first-screen .container {
+  min-height: inherit;
+}
+.first-screen__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: inherit;
+  padding: 32px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media (max-width: 576px) {
+  .first-screen__wrapper {
+    padding: 156px 0 32px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.first-screen__content {
+  max-width: 680px;
+}
+.first-screen__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 0 40px;
+  font-family: "ST-Nizhegorodsky", sans-serif;
+  font-weight: 400;
+  font-size: 93px;
+  letter-spacing: 0.05em;
+  color: #f7a85b;
+  text-align: right;
+}
+@media (max-width: 576px) {
+  .first-screen__title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 32px;
+    font-size: 34px;
+    text-align: center;
+  }
+}
+.first-screen__title span {
+  background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.first-screen__title b {
+  font-weight: 400;
+  font-size: 125px;
+}
+@media (max-width: 576px) {
+  .first-screen__title b {
+    font-size: 48px;
+  }
+}
+.first-screen__quote {
+  margin: 0 0 32px;
+}
+@media (max-width: 576px) {
+  .first-screen__quote {
+    display: none;
+  }
+}
+.first-screen__quote-text {
+  margin: 0 0 12px;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: right;
+  color: #eae5dd;
+}
+.first-screen__quote-author {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: right;
+  color: #eae5dd;
+}
+.first-screen__signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 576px) {
+  .first-screen__signup {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.first-screen__signup-button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  min-height: 94px;
+  padding: 28px 32px;
+  border: 1px solid rgba(247, 168, 91, 0.25);
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .first-screen__signup-button {
+    gap: 8px;
+    min-height: 70px;
+    padding: 20px 32px;
+  }
+}
+.first-screen__signup-button::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 14px;
+  z-index: 1;
+  display: block;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 6px 0 0 rgba(169, 107, 46, 0.89), 0 15px 50px 0 rgba(244, 166, 89, 0.36);
+          box-shadow: 0 6px 0 0 rgba(169, 107, 46, 0.89), 0 15px 50px 0 rgba(244, 166, 89, 0.36);
+  background: radial-gradient(221.25% 55.31% at 50% 50%, #f7a85b 20.19%, #925c27 100%);
+  -webkit-transition: -webkit-filter ease-out 0.2s;
+  transition: -webkit-filter ease-out 0.2s;
+  transition: filter ease-out 0.2s;
+  transition: filter ease-out 0.2s, -webkit-filter ease-out 0.2s;
+  will-change: filter;
+}
+@media (max-width: 576px) {
+  .first-screen__signup-button::before {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 10px;
+    -webkit-box-shadow: 0 4px 0 0 rgba(169, 107, 46, 0.89), 0 15px 50px 0 rgba(244, 166, 89, 0.36);
+            box-shadow: 0 4px 0 0 rgba(169, 107, 46, 0.89), 0 15px 50px 0 rgba(244, 166, 89, 0.36);
+  }
+}
+.first-screen__signup-button:hover::before {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+.first-screen__signup-button:active::before {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.first-screen__signup-button-icon, .first-screen__signup-button-text {
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+.first-screen__signup-button-icon {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 100%;
+  width: 32px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .first-screen__signup-button-icon {
+    width: 16px;
+  }
+}
+.first-screen__signup-button-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #452117;
+}
+@media (max-width: 576px) {
+  .first-screen__signup-button-text {
+    font-size: 14px;
   }
 }

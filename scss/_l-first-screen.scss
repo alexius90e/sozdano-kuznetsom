@@ -1,0 +1,201 @@
+.first-screen {
+  min-height: 1080px;
+  background:
+    url(../assets/first-screen-bg.jpg) center no-repeat,
+    linear-gradient(90deg, #000 0%, #0a1010 100%);
+  background-size: auto 1080px;
+
+  @include laptop {
+    background: url(../assets/first-screen-bg.jpg) left -360px center no-repeat;
+  }
+
+  @include tablet {
+    background: url(../assets/first-screen-bg.jpg) left -420px center no-repeat;
+  }
+
+  @include mobile {
+    min-height: 782px;
+    background: url(../assets/first-screen-bg.jpg) left -170px bottom no-repeat;
+    background-size: auto 520px;
+  }
+
+  & .container {
+    min-height: inherit;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: inherit;
+    padding: 32px 0;
+    box-sizing: border-box;
+
+    @include mobile {
+      padding: 156px 0 32px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    max-width: 680px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0 0 40px;
+    font-family: 'ST-Nizhegorodsky', sans-serif;
+    font-weight: 400;
+    font-size: 93px;
+    letter-spacing: 0.05em;
+    color: #f7a85b;
+    text-align: right;
+
+    @include mobile {
+      align-items: center;
+      margin-bottom: 32px;
+      font-size: 34px;
+      text-align: center;
+    }
+
+    & span {
+      background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    & b {
+      font-weight: 400;
+      font-size: 125px;
+
+      @include mobile {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__quote {
+    margin: 0 0 32px;
+
+    @include mobile {
+      display: none;
+    }
+
+    &-text {
+      margin: 0 0 12px;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 18px;
+      text-align: right;
+      color: #eae5dd;
+    }
+
+    &-author {
+      margin: 0;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: right;
+      color: #eae5dd;
+    }
+  }
+
+  &__signup {
+    display: flex;
+    justify-content: flex-end;
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    &-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 94px;
+      padding: 28px 32px;
+      border: 1px solid rgba($color: #f7a85b, $alpha: 0.25);
+      border-radius: 100px;
+      background-color: rgba($color: #ffffff, $alpha: 0);
+      cursor: pointer;
+
+      @include mobile {
+        gap: 8px;
+        min-height: 70px;
+        padding: 20px 32px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 14px;
+        z-index: 1;
+        display: block;
+        border-radius: 100px;
+        box-shadow:
+          0 6px 0 0 rgba(169, 107, 46, 0.89),
+          0 15px 50px 0 rgba(244, 166, 89, 0.36);
+        background: radial-gradient(221.25% 55.31% at 50% 50%, #f7a85b 20.19%, #925c27 100%);
+        transition: filter ease-out 0.2s;
+        will-change: filter;
+
+        @include mobile {
+          top: 6px;
+          left: 6px;
+          right: 6px;
+          bottom: 10px;
+          box-shadow:
+            0 4px 0 0 rgba(169, 107, 46, 0.89),
+            0 15px 50px 0 rgba(244, 166, 89, 0.36);
+        }
+      }
+
+      &:hover::before {
+        filter: brightness(1.1);
+      }
+
+      &:active::before {
+        filter: brightness(1);
+      }
+
+      &-icon,
+      &-text {
+        position: relative;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      &-icon {
+        display: block;
+        flex: 0 0 auto;
+        max-width: 100%;
+        width: 32px;
+        height: auto;
+
+        @include mobile {
+          width: 16px;
+        }
+      }
+
+      &-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #452117;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
