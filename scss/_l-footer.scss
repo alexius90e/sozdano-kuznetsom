@@ -1,2 +1,201 @@
 .footer {
+  padding: 184px 0 156px; 
+  background: url(../assets/footer-ellipse.svg) right 15% center no-repeat;
+  background-size: auto 50%;
+
+  @include laptop {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 72px 0 62px;
+    background-position: bottom center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @include laptop {
+      flex-wrap: wrap;
+      gap: 49px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+    transform: rotate(1.25deg);
+
+    @include laptop {
+      transform: none;
+    }
+
+    @include mobile {
+      gap: 32px;
+    }
+
+    &-title {
+      margin: 0;
+      font-family: 'ST-Nizhegorodsky', sans-serif;
+      font-weight: 400;
+      font-size: 93px;
+      letter-spacing: 0.05em;
+      background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @include laptop {
+        font-size: 60px;
+      }
+
+      @include mobile {
+        font-size: 34px;
+        text-align: center;
+      }
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      @include mobile {
+        gap: 32px;
+      }
+
+      &-phone,
+      &-address {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      &-address {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: #eae5dd;
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 18px;
+          height: 22px;
+          background: url(../assets/location.svg) center / cover no-repeat;
+        }
+      }
+
+      &-phone {
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          width: 22px;
+          height: 22px;
+          background: url(../assets/phone.svg) center / cover no-repeat;
+        }
+
+        &-link {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: 24px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          text-align: right;
+          color: #fff;
+
+          @include mobile {
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+
+      @include mobile {
+        justify-content: center;
+      }
+
+      &-title {
+        font-family: 'ST-Nizhegorodsky', sans-serif;
+        font-weight: 400;
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include mobile {
+          font-size: 24px;
+        }
+      }
+
+      &-link {
+        flex: 0 0 auto;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: 60px;
+          height: auto;
+
+          @include mobile {
+            width: 39px;
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    flex: 0 0 55.5%;
+    transform: rotate(-1.25deg);
+
+    @include laptop {
+      flex: 1 1 100%;
+    }
+
+    @include mobile {
+      transform: rotate(-2.5deg);
+    }
+
+    &-iframe {
+      display: block;
+      width: 100%;
+      height: 608px;
+      border-radius: 34px;
+
+      @include mobile {
+        height: auto;
+        aspect-ratio: 315 / 278;
+        border-radius: 18px;
+      }
+    }
+  }
 }

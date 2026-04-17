@@ -807,6 +807,13 @@ img {
   padding: 256px 0 196px;
   background: url(../assets/coaches-bg.png) top center/cover no-repeat;
 }
+@media (max-width: 576px) {
+  .coaches {
+    padding: 94px 0 61px;
+    background-position: top -60px center;
+    background-size: 800px calc(100% + 100px);
+  }
+}
 .coaches__wrapper {
   position: relative;
   display: -webkit-box;
@@ -825,6 +832,12 @@ img {
 @media (max-width: 1200px) {
   .coaches__wrapper {
     padding: 56px 32px;
+  }
+}
+@media (max-width: 768px) {
+  .coaches__wrapper {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 .coaches__wrapper::before {
@@ -891,6 +904,16 @@ img {
   position: relative;
   z-index: 1;
   border-radius: 34px;
+}
+@media (max-width: 576px) {
+  .coaches__card-photo-image {
+    border-radius: 26px;
+  }
+}
+@media (max-width: 576px) {
+  .coaches__card-photo-image {
+    border-radius: 18px;
+  }
 }
 .coaches__card-photo-icon {
   position: absolute;
@@ -1027,5 +1050,257 @@ img {
 @media (max-width: 576px) {
   .coaches__card-info-name {
     padding: 0;
+  }
+}
+
+.footer {
+  padding: 184px 0 156px;
+  background: url(../assets/footer-ellipse.svg) right 15% center no-repeat;
+  background-size: auto 50%;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    padding: 72px 0 62px;
+    background-position: bottom center;
+  }
+}
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+}
+@media (max-width: 1024px) {
+  .footer__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 49px;
+  }
+}
+.footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 49px;
+  -webkit-transform: rotate(1.25deg);
+          transform: rotate(1.25deg);
+}
+@media (max-width: 1024px) {
+  .footer__info {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@media (max-width: 576px) {
+  .footer__info {
+    gap: 32px;
+  }
+}
+.footer__info-title {
+  margin: 0;
+  font-family: "ST-Nizhegorodsky", sans-serif;
+  font-weight: 400;
+  font-size: 93px;
+  letter-spacing: 0.05em;
+  background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1024px) {
+  .footer__info-title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .footer__info-title {
+    font-size: 34px;
+    text-align: center;
+  }
+}
+.footer__info-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+@media (max-width: 576px) {
+  .footer__info-contacts {
+    gap: 32px;
+  }
+}
+.footer__info-contacts-phone, .footer__info-contacts-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.footer__info-contacts-address {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #eae5dd;
+}
+@media (max-width: 576px) {
+  .footer__info-contacts-address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.footer__info-contacts-address::before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 18px;
+  height: 22px;
+  background: url(../assets/location.svg) center/cover no-repeat;
+}
+@media (max-width: 576px) {
+  .footer__info-contacts-phone {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+  }
+}
+.footer__info-contacts-phone::before {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  background: url(../assets/phone.svg) center/cover no-repeat;
+}
+.footer__info-contacts-phone-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .footer__info-contacts-phone-link {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+.footer__info-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+@media (max-width: 576px) {
+  .footer__info-social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.footer__info-social-title {
+  font-family: "ST-Nizhegorodsky", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 576px) {
+  .footer__info-social-title {
+    font-size: 24px;
+  }
+}
+.footer__info-social-link {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.footer__info-social-link-image {
+  display: block;
+  max-width: 100%;
+  width: 60px;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .footer__info-social-link-image {
+    width: 39px;
+  }
+}
+.footer__map {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55.5%;
+          flex: 0 0 55.5%;
+  -webkit-transform: rotate(-1.25deg);
+          transform: rotate(-1.25deg);
+}
+@media (max-width: 1024px) {
+  .footer__map {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 576px) {
+  .footer__map {
+    -webkit-transform: rotate(-2.5deg);
+            transform: rotate(-2.5deg);
+  }
+}
+.footer__map-iframe {
+  display: block;
+  width: 100%;
+  height: 608px;
+  border-radius: 34px;
+}
+@media (max-width: 576px) {
+  .footer__map-iframe {
+    height: auto;
+    aspect-ratio: 315/278;
+    border-radius: 18px;
   }
 }
