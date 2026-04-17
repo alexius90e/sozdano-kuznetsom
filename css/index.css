@@ -802,3 +802,230 @@ img {
     font-size: 16px;
   }
 }
+
+.coaches {
+  padding: 256px 0 196px;
+  background: url(../assets/coaches-bg.png) top center/cover no-repeat;
+}
+.coaches__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 688px;
+  padding: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+@media (max-width: 1200px) {
+  .coaches__wrapper {
+    padding: 56px 32px;
+  }
+}
+.coaches__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: -84px;
+  z-index: 0;
+  display: block;
+  width: 154px;
+  aspect-ratio: 1/1;
+  background: url(../assets/coaches-wrapper-icon.png) center/contain no-repeat;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  opacity: 0.43;
+}
+.coaches__wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 34px;
+  background: url(../assets/coaches-wrapper-bg.jpg) center/cover no-repeat;
+}
+.coaches__cards {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 1200px) {
+  .coaches__cards {
+    max-width: calc(100% - 360px);
+  }
+}
+@media (max-width: 768px) {
+  .coaches__cards {
+    gap: 56px;
+    max-width: none;
+  }
+}
+.coaches__card {
+  position: relative;
+  max-width: 674px;
+}
+.coaches__card-photo {
+  position: absolute;
+  display: block;
+  z-index: 20;
+  width: 100%;
+}
+.coaches__card-photo-image, .coaches__card-photo-icon {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.coaches__card-photo-image {
+  position: relative;
+  z-index: 1;
+  border-radius: 34px;
+}
+.coaches__card-photo-icon {
+  position: absolute;
+}
+.coaches__card_smith .coaches__card-photo {
+  top: -324px;
+  left: calc(100% + 128px);
+  z-index: 20;
+  display: block;
+  max-width: 424px;
+  aspect-ratio: 424/602;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+}
+@media (max-width: 1024px) {
+  .coaches__card_smith .coaches__card-photo {
+    left: calc(100% + 40px);
+    top: -200px;
+    max-width: 320px;
+  }
+}
+@media (max-width: 768px) {
+  .coaches__card_smith .coaches__card-photo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 36px;
+  }
+}
+.coaches__card_smith .coaches__card-photo-icon {
+  top: 42px;
+  right: -175px;
+  z-index: 0;
+  -webkit-transform: rotate(32deg);
+          transform: rotate(32deg);
+}
+@media (max-width: 1024px) {
+  .coaches__card_smith .coaches__card-photo-icon {
+    top: -70px;
+    right: -70px;
+    width: 240px;
+  }
+}
+@media (max-width: 576px) {
+  .coaches__card_smith .coaches__card-photo-icon {
+    top: -50px;
+    right: -51px;
+    width: 152px;
+  }
+}
+.coaches__card_shaman .coaches__card-photo {
+  top: -42px;
+  left: calc(100% + 230px);
+  z-index: 21;
+  display: block;
+  max-width: 339px;
+  aspect-ratio: 339/484;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+@media (max-width: 1024px) {
+  .coaches__card_shaman .coaches__card-photo {
+    left: calc(100% + 80px);
+    top: -20px;
+    max-width: 280px;
+  }
+}
+@media (max-width: 768px) {
+  .coaches__card_shaman .coaches__card-photo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 36px;
+  }
+}
+.coaches__card_shaman .coaches__card-photo-icon {
+  right: -129px;
+  bottom: -97px;
+  z-index: 2;
+  -webkit-transform: rotate(46deg);
+          transform: rotate(46deg);
+}
+@media (max-width: 1024px) {
+  .coaches__card_shaman .coaches__card-photo-icon {
+    right: -70px;
+    bottom: -70px;
+    width: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .coaches__card_shaman .coaches__card-photo-icon {
+    right: -50px;
+    bottom: -38px;
+    width: 116px;
+  }
+}
+.coaches__card-info {
+  position: relative;
+  font-family: "ST-Nizhegorodsky", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+}
+@media (max-width: 1024px) {
+  .coaches__card-info {
+    font-size: 26px;
+  }
+}
+@media (max-width: 576px) {
+  .coaches__card-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 18px;
+    font-size: 22px;
+    text-align: center;
+  }
+}
+.coaches__card-info-text {
+  background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.coaches__card-info-name {
+  padding-left: 24px;
+  color: #f7a85b;
+  float: right;
+}
+@media (max-width: 576px) {
+  .coaches__card-info-name {
+    padding: 0;
+  }
+}

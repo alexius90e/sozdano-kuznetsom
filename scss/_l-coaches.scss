@@ -1,0 +1,208 @@
+.coaches {
+  padding: 256px 0 196px;
+  background: url(../assets/coaches-bg.png) top center / cover no-repeat;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 688px;
+    padding: 56px;
+    box-sizing: border-box;
+    transform: rotate(-1deg);
+
+    @include desktop {
+      padding: 56px 32px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: -84px;
+      z-index: 0;
+      display: block;
+      width: 154px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/coaches-wrapper-icon.png) center / contain no-repeat;
+      transform: rotate(-20deg);
+      opacity: 0.43;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      border-radius: 34px;
+      background: url(../assets/coaches-wrapper-bg.jpg) center / cover no-repeat;
+    }
+  }
+
+  &__cards {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include desktop {
+      max-width: calc(100% - 360px);
+    }
+
+    @include tablet {
+      gap: 56px;
+      max-width: none;
+    }
+  }
+
+  &__card {
+    position: relative;
+    max-width: 674px;
+
+    &-photo {
+      position: absolute;
+      display: block;
+      z-index: 20;
+      width: 100%;
+
+      &-image,
+      &-icon {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      &-image {
+        position: relative;
+        z-index: 1;
+        border-radius: 34px;
+      }
+
+      &-icon {
+        position: absolute;
+      }
+    }
+
+    &_smith &-photo {
+      top: -324px;
+      left: calc(100% + 128px);
+      z-index: 20;
+      display: block;
+      max-width: 424px;
+      aspect-ratio: 424 / 602;
+      transform: rotate(4deg);
+
+      @include laptop {
+        left: calc(100% + 40px);
+        top: -200px;
+        max-width: 320px;
+      }
+
+      @include tablet {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto 36px;
+      }
+
+      &-icon {
+        top: 42px;
+        right: -175px;
+        z-index: 0;
+        transform: rotate(32deg);
+
+        @include laptop {
+          top: -70px;
+          right: -70px;
+          width: 240px;
+        }
+
+        @include mobile {
+          top: -50px;
+          right: -51px;
+          width: 152px;
+        }
+      }
+    }
+
+    &_shaman &-photo {
+      top: -42px;
+      left: calc(100% + 230px);
+      z-index: 21;
+      display: block;
+      max-width: 339px;
+      aspect-ratio: 339 / 484;
+      transform: rotate(-10deg);
+
+      @include laptop {
+        left: calc(100% + 80px);
+        top: -20px;
+        max-width: 280px;
+      }
+
+      @include tablet {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto 36px;
+      }
+
+      &-icon {
+        right: -129px;
+        bottom: -97px;
+        z-index: 2;
+        transform: rotate(46deg);
+
+        @include laptop {
+          right: -70px;
+          bottom: -70px;
+          width: 200px;
+        }
+
+        @include mobile {
+          right: -50px;
+          bottom: -38px;
+          width: 116px;
+        }
+      }
+    }
+
+    &-info {
+      position: relative;
+      font-family: 'ST-Nizhegorodsky', sans-serif;
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: 0.05em;
+
+      @include laptop {
+        font-size: 26px;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 22px;
+        text-align: center;
+      }
+
+      &-text {
+        background: linear-gradient(148deg, #eae5dd 0%, #d3baaa 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &-name {
+        padding-left: 24px;
+        color: #f7a85b;
+        float: right;
+
+        @include mobile {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
