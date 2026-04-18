@@ -57,6 +57,11 @@
         left: calc(50% - 472px);
         transform: translateX(-100%);
 
+        @include desktoplg {
+          left: calc(50% - 400px);
+          width: 450px;
+        }
+
         @include laptop {
           top: -60px;
           left: calc(50% - 240px);
@@ -75,6 +80,12 @@
         top: 320px;
         left: calc(50% - 717px);
         transform: translateX(-100%) rotate(3deg);
+
+        @include desktoplg {
+          top: 380px;
+          left: calc(50% - 420px);
+          width: 280px;
+        }
 
         @include laptop {
           top: 240px;
@@ -95,6 +106,12 @@
         left: calc(50% - 467px);
         transform: translateX(-100%) rotate(83deg);
 
+        @include desktoplg {
+          top: 650px;
+          left: calc(50% - 440px);
+          width: 360px;
+        }
+
         @include laptop {
           top: 450px;
           left: calc(50% - 240px);
@@ -112,6 +129,12 @@
       &:nth-child(4) {
         top: 140px;
         left: calc(50% + 499px);
+
+        @include desktoplg {
+          top: 80px;
+          left: calc(50% + 500px);
+          width: 260px;
+        }
 
         @include laptop {
           top: 40px;
@@ -131,6 +154,12 @@
         top: 344px;
         left: calc(50% + 674px);
 
+        @include desktoplg {
+          top: 350px;
+          left: calc(50% + 380px);
+          width: 320px;
+        }
+
         @include laptop {
           top: 260px;
           left: calc(50% + 240px);
@@ -149,6 +178,12 @@
         top: 474px;
         left: calc(50% + 461px);
         transform: rotate(21deg);
+
+        @include desktoplg {
+          top: 650px;
+          left: calc(50% + 441px);
+          width: 380px;
+        }
 
         @include laptop {
           top: 440px;

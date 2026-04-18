@@ -16,6 +16,14 @@
     background: url(../assets/first-screen-bg.jpg) center no-repeat;
     background-size: auto 1080px;
 
+    @include desktoplg {
+      background-position: left -80px center;
+    }
+
+    @include desktop {
+      background-position: center;
+    }
+
     @include laptop {
       background: url(../assets/first-screen-bg.jpg) left -360px center no-repeat;
     }

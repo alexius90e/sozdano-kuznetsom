@@ -137,6 +137,16 @@ img {
   background: url(../assets/first-screen-bg.jpg) center no-repeat;
   background-size: auto 1080px;
 }
+@media (max-width: 1560px) {
+  .first-screen::before {
+    background-position: left -80px center;
+  }
+}
+@media (max-width: 1200px) {
+  .first-screen::before {
+    background-position: center;
+  }
+}
 @media (max-width: 1024px) {
   .first-screen::before {
     background: url(../assets/first-screen-bg.jpg) left -360px center no-repeat;
@@ -448,6 +458,12 @@ img {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(1) {
+    left: calc(50% - 400px);
+    width: 450px;
+  }
+}
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(1) {
     top: -60px;
@@ -469,6 +485,13 @@ img {
   left: calc(50% - 717px);
   -webkit-transform: translateX(-100%) rotate(3deg);
           transform: translateX(-100%) rotate(3deg);
+}
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(2) {
+    top: 380px;
+    left: calc(50% - 420px);
+    width: 280px;
+  }
 }
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(2) {
@@ -492,6 +515,13 @@ img {
   -webkit-transform: translateX(-100%) rotate(83deg);
           transform: translateX(-100%) rotate(83deg);
 }
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(3) {
+    top: 650px;
+    left: calc(50% - 440px);
+    width: 360px;
+  }
+}
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(3) {
     top: 450px;
@@ -512,6 +542,13 @@ img {
   top: 140px;
   left: calc(50% + 499px);
 }
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(4) {
+    top: 80px;
+    left: calc(50% + 500px);
+    width: 260px;
+  }
+}
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(4) {
     top: 40px;
@@ -530,6 +567,13 @@ img {
 .break-beyond__icons-item:nth-child(5) {
   top: 344px;
   left: calc(50% + 674px);
+}
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(5) {
+    top: 350px;
+    left: calc(50% + 380px);
+    width: 320px;
+  }
 }
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(5) {
@@ -551,6 +595,13 @@ img {
   left: calc(50% + 461px);
   -webkit-transform: rotate(21deg);
           transform: rotate(21deg);
+}
+@media (max-width: 1560px) {
+  .break-beyond__icons-item:nth-child(6) {
+    top: 650px;
+    left: calc(50% + 441px);
+    width: 380px;
+  }
 }
 @media (max-width: 1024px) {
   .break-beyond__icons-item:nth-child(6) {
